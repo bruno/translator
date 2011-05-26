@@ -1,5 +1,10 @@
 <div id='translations'>
   <h1>Translations</h1>
+  <ul>
+    <li><%= link_to_unless_current "Application Translations", translations_path(:show => "application") %></li>
+    <li><%= link_to_unless_current "Framework Translations", translations_path(:show => "framework") %></li>
+    <li><%= link_to_unless_current "All Translations", translations_path(:show => "all") %></li>
+  </ul>
 
   <% @keys.each do |key| %>
     <%= key %>
@@ -13,6 +18,15 @@
       <%= link_to_unless_current p, translations_path(:show => params[:show], :page => p) %>
     <% end %>
   <% end %>
+</div>
+
+<div id="footer">
+  <div id="shameless">
+    Brought to you by <%= link_to "AmberBit" %> Ruby on Rails web development team.
+    <br/>
+    2010-2011 &copy; Hubert Łępicki &lt;hubert.lepicki@amberbit.com&gt;
+  </div>
+  <%= link_to image_tag("http://amberbit.com/images/logo.png"), "http://amberbit.com" %>
 </div>
 
 <script type="text/javascript">
