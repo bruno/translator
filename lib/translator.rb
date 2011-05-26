@@ -47,7 +47,7 @@ module Translator
                      "devise.passwords.send_instructions", "devise.passwords.updated", "devise.confirmations.send_instructions",
                      "devise.confirmations.confirmed", "devise.registrations.signed_up", "devise.registrations.updated",
                      "devise.registrations.destroyed", "devise.unlocks.send_instructions", "devise.unlocks.unlocked",
-                     "devise.mailer.confirmation_instructions.subject", "devise.mailer.reset_password_instructions.subjext",
+                     "devise.mailer.confirmation_instructions.subject", "devise.mailer.reset_password_instructions.subject",
                      "devise.mailer.unlock_instructions.subject", "devise.failure.already_authenticated", 
                      "devise.registrations.inactive_signed_up", "devise.omniauth_callbacks.success",
                      "devise.omniauth_callbacks.failure", # adding additional messages to avoid clutter
