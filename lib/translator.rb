@@ -47,8 +47,13 @@ module Translator
                      "devise.passwords.send_instructions", "devise.passwords.updated", "devise.confirmations.send_instructions",
                      "devise.confirmations.confirmed", "devise.registrations.signed_up", "devise.registrations.updated",
                      "devise.registrations.destroyed", "devise.unlocks.send_instructions", "devise.unlocks.unlocked",
-                     "devise.mailer.confirmation_instructions.subject", "devise.mailer.reset_password_instructions.subjet",
-                     "devise.mailer.unlock_instructions.subject"]
+                     "devise.mailer.confirmation_instructions.subject", "devise.mailer.reset_password_instructions.subjext",
+                     "devise.mailer.unlock_instructions.subject", "devise.failure.already_authenticated", 
+                     "devise.registrations.inactive_signed_up", "devise.omniauth_callbacks.success",
+                     "devise.omniauth_callbacks.failure", # adding additional messages to avoid clutter
+                     "errors.messages.expired", "errors.messages.not_saved.one", "errors.messages.not_saved.other",
+                     "errors.template.header.one", "errors.template.header.other", "errors.template.body",
+                     "activerecord.errors.messages.taken", "activerecord.errors.messages.record_invalid" ]
                      
 
   def self.setup_backend(simple_backend)
