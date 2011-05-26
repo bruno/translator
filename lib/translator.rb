@@ -7,6 +7,7 @@ module Translator
     attr_writer :layout_name
   end
 
+  # Added devise locale translations to the framework keys to not pollute our app
   @framework_keys = ["date.formats.default", "date.formats.short", "date.formats.long", 
                      "time.formats.default", "time.formats.short", "time.formats.long", "time.am", "time.pm", 
                      "support.array.words_connector", "support.array.two_words_connector", "support.array.last_word_connector", 
@@ -38,7 +39,17 @@ module Translator
                      "datetime.distance_in_words.almost_x_years.one", "datetime.distance_in_words.almost_x_years.other", 
                      "datetime.prompts.year", "datetime.prompts.month", "datetime.prompts.day", "datetime.prompts.hour", 
                      "datetime.prompts.minute", "datetime.prompts.second", "helpers.select.prompt", "helpers.submit.create", 
-                     "helpers.submit.update", "helpers.submit.submit"]
+                     "helpers.submit.update", "helpers.submit.submit", # adding devise messages after this
+                     "errors.messages.not_found", "errors.messages.already_confirmed", "errors.messages.not_locked",
+                     "devise.failure.unauthenticated", "devise.failure.unconfirmed", "devise.failure.locked", 
+                     "devise.failure.invalid", "devise.failure.invalid_token", "devise.failure.timeout", 
+                     "devise.failure.inactive", "devise.sessions.signed_in", "devise.sessions.signed_out",
+                     "devise.passwords.send_instructions", "devise.passwords.updated", "devise.confirmations.send_instructions",
+                     "devise.confirmations.confirmed", "devise.registrations.signed_up", "devise.registrations.updated",
+                     "devise.registrations.destroyed", "devise.unlocks.send_instructions", "devise.unlocks.unlocked",
+                     "devise.mailer.confirmation_instructions.subject", "devise.mailer.reset_password_instructions.subjet",
+                     "devise.mailer.unlock_instructions.subject"]
+                     
 
   def self.setup_backend(simple_backend)
     @simple_backend = simple_backend
